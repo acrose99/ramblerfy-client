@@ -1,3 +1,4 @@
+/*
 .Home .maintext {
   padding: 80px 0;
   text-align: center;
@@ -10,4 +11,61 @@
 
 .Home .maintext p {
   color: #999;
+}
+*/
+
+.main-content-header{
+    width: 1180px;
+    position: absolute;
+    top: 50%;
+    left: 50% ;
+    transform: translate(-50%, -50%);
+}
+
+h1{
+    color: white;
+    font-size: 240%;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 200px;
+
+}
+
+.btn-one {
+    background-color: transparent;
+    color: whitesmoke;
+    margin-right: 15px;
+    border: 1px solid whitesmoke;
+}
+
+.btn-one:hover{
+    background-color: #bf55ec;
+}
+
+
+.btn-two {
+    background-color: transparent;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+}
+
+.btn-two:hover{
+    background-color: #bf55ec;
+}
+
+.colorchange{
+    animation: colorchangeRamblerfy 1s infinite ;
+}
+@keyframes colorchangeRamblerfy {
+    0% {color: gold;}
+    25% {color: maroon;}
+    50% {color: gold;}
+    100% {color: maroon;}
 }

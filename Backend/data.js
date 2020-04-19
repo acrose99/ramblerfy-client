@@ -4,8 +4,19 @@ const Schema = mongoose.Schema;
 // this will be our data base's data structure
 const DataSchema = new Schema(
     {
-        id: Number,
-        message: String
+        cover_image_url: String,
+        danceability: Number,
+        duration_ms: Number,
+        energy: Number,
+        key: Number,
+        loudness: Number,
+        spotify_url: String,
+        tempo: Number,
+        track_album: String,
+        track_artist: String,
+        track_name: String,
+        uri: String,
+        valence: Number
     },
     { timestamps: true }
 );

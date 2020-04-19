@@ -31,4 +31,25 @@ def main():
     print("Data retrieved in %.2f seconds" % (delta,))
 
 
-main()
+def script():
+    client_credentials_manager = SpotifyClientCredentials(client_id="318bd146dc0b46bd9e41e990bbe4ce2a",
+                                                          client_secret="c56fe1ad00454247b966648148405c19",
+                                                          proxies=None,
+                                                          requests_timeout=None)
+    sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
+
+    # Turn this to TRUE to see all the HTTP exchanges between us and the API
+    # Turn this to False for pretty output
+    sp.trace = False
+    search_type = "artist"
+    with open('output.txt') as f:
+        artists = []
+        for line in f:
+            artists.append(line)
+    # you may also want to remove whitespace characters like `\n` at the end of each line
+    artists = [x.strip() for x in artists]
+    search.search_multiples(sp, artists, search_type)
+
+
+# main()
+script()

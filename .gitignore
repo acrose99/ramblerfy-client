@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/ramblerfy-client.iml
+/.idea/vcs.xml

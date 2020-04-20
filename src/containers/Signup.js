@@ -39,11 +39,27 @@ export default function Signup(props) {
       const newUser = Auth.signUp({
         username: fields.email,
         password: fields.password
+      }).catch(e => {
+        //Redirects to confirmation page if browser is exited out/refreshed during confirmation process
+        if (e.name === "UsernameExistsException") {
+          alert(`You are already registered. Your confirmation code has been resent to ${fields.email}`);
+          //setIsLoading(false);
+          Auth.resendSignUp(fields.email);
+          const newUser = {
+            username: fields.email,
+            password: fields.password
+          };
+
+        } else {
+          alert(e.message);
+        }
       });
 
       setIsLoading(false);
       setNewUser(newUser);
-    } catch (e) {
+
+    } catch(e) {
+
       alert(e.message);
       setIsLoading(false);
     }
@@ -120,7 +136,9 @@ export default function Signup(props) {
             value={fields.confirmationCode}
             onChange={handleFieldChange}
           />
-          <HelpBlock>Please check your email for the code</HelpBlock>
+          <HelpBlock
+            style={{color:"white"}}
+            >Please check your email for the code</HelpBlock>
         </FormGroup>
         <LoadButton
           block

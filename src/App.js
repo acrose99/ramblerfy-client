@@ -15,8 +15,9 @@ function App(props) {
   */
   const [isAuth, userHasAuth] = useState(false);
   const [isAuthenticating, setIsAuthenticating] = useState(true);
+  const [userCreds, setUserCreds] = useState(null);
 
-  // triggers onLoad the first time app is loaded
+  // triggers onLoad the first time app is loaded (empty list of var as param)
   useEffect(() => {
     onLoad();
   }, []);
@@ -26,6 +27,8 @@ function App(props) {
     try {
       await Auth.currentSession();
       userHasAuth(true);
+      const userCreds = await Auth.currentUserInfo();
+      setUserCreds(userCreds);
     }
     catch(e) {
       if (e !== 'No current user') {
@@ -40,35 +43,13 @@ function App(props) {
   async function handleLogout() {
     await Auth.signOut();
     userHasAuth(false);
+    setUserCreds(null);
     props.history.push("/login");
   }
 
   return (
     !isAuthenticating &&
     <div className="App-container">
-      {/*}
-      <Navbar fluid collapseOnSelect>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <Link to="/">Ramblerfy</Link>
-          </Navbar.Brand>
-        </Navbar.Header>
-        <Nav>
-          {isAuth
-            ? <NavItem onClick={handleLogout}>Logout</NavItem>
-            : <>
-                <LinkContainer to="/signup">
-                  <NavItem>Signup</NavItem>
-                </LinkContainer>
-                <LinkContainer to="/login">
-                  <NavItem>Login</NavItem>
-                </LinkContainer>
-              </>
-          }
-        </Nav>
-      </Navbar>
-      <Jumbotron />
-      */}
       <header>
         <nav>
           <div className="row clearfix">
@@ -81,7 +62,11 @@ function App(props) {
                 id="check-status"
                 >
                   <NavItem onClick={handleLogout}>Logout</NavItem>
+                  <LinkContainer to="/settings">
+                    <li><a href="#">SETTINGS</a></li>
+                  </LinkContainer>
                 </ul>
+
               : <>
                   <ul className="main-nav animated slideInRight" id="check-status">
                     <li><a href="#">MUSIC</a></li>
@@ -99,10 +84,21 @@ function App(props) {
           </div>
         </nav>
         { /*this handles all components rendered under the navbar */ }
-        <Routes appProps={{ isAuth, userHasAuth }} />
+        <Routes appProps={{ isAuth, userHasAuth, userCreds, setUserCreds }} />
       </header>
     </div>
   );
 }
+
+/* driver connection example
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://<username>:<password>@ramblerpy-5rd9x.mongodb.net/test?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+*/
 
 export default withRouter(App);

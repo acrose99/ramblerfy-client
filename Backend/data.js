@@ -1,28 +1,22 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+// Insert Functions here
 
-// this will be our data base's data structure
-const DataSchema = new Schema(
-    {
-        cover_image_url: String,
-        danceability: Number,
-        duration_ms: Number,
-        energy: Number,
-        key: Number,
-        loudness: Number,
-        spotify_url: String,
-        tempo: Number,
-        track_album: String,
-        track_artist: String,
-        track_name: String,
-        uri: String,
-        valence: Number
-    },
-    { timestamps: true }
-);
+const MongoClient = require('mongodb').MongoClient;
+const express = require('express');
+var cors = require('cors');
+const app = express();
+app.use(cors());
 
-// export the new Schema so we could modify it using Node.js
-module.exports = mongoose.model("Data", DataSchema);
-
-// export the new Schema so we could modify it using Node.js
-module.exports = mongoose.model("Data", DataSchema);
+// this is our MongoDB database
+// connects our back end code with the database
+const dbUri = "mongodb+srv://arose5:ZaraYaqob14$3@ramblerpy-5rd9x.mongodb.net/test?retryWrites=true&w=majority"
+const client = new MongoClient(dbUri, { useNewUrlParser: true });
+client.connect(err => {
+    const collection = client.db("Spotify_Tracks").collection("Tracks");
+    client.on('error', console.error.bind(console, 'MongoDB connection error:'));
+    collection.find({}).toArray(function (err, data) {
+        console.log(data); // it will print your collection data
+        console.log(data[0]);
+    })
+    // perform actions on the collection object
+    client.close();
+});

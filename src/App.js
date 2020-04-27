@@ -81,9 +81,16 @@ function App(props) {
                 id="check-status"
                 >
                   <NavItem onClick={handleLogout}>Logout</NavItem>
+                  <NavItem href={"/documentation"}>Documentation</NavItem>
+                  <NavItem href="#">Music</NavItem>
+                  <NavItem href="#">Contact US</NavItem>
                 </ul>
+
               : <>
                   <ul className="main-nav animated slideInRight" id="check-status">
+                    <LinkContainer to="/documentation">
+                      <li><a href="#">Documentation</a></li>
+                    </LinkContainer>
                     <li><a href="#">MUSIC</a></li>
                     <LinkContainer to="/signup">
                       <li><a href="#">SIGN UP</a></li>

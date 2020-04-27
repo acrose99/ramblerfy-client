@@ -59,7 +59,15 @@ h1{
 .btn-two:hover{
     background-color: #bf55ec;
 }
-
+.btn-three {
+    background-color: paleturquoise;
+    color: darkblue;
+    margin-right: 15px;
+    border: 1px groove cyan;
+}
+.btn-three:hover {
+    background-color: #bf55ec;
+}
 .colorchange{
     animation: colorchangeRamblerfy 1s infinite ;
 }

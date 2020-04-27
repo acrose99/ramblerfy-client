@@ -17,7 +17,7 @@ const client = new MongoClient(dbUri, { useNewUrlParser: true,  useUnifiedTopolo
 //         Currently Hardcoded
 function getTracks(variable) {
     if (variable === "danceabilty") {
-        let filterDanceabiltyLow = 0.8;
+        let filterDanceabiltyLow = 0.6;
         let filterDanceabiltyHigh = 1.0;
         getDanceabilty(filterDanceabiltyLow,filterDanceabiltyHigh)
     }

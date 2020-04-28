@@ -65,18 +65,28 @@ function App(props) {
                   <LinkContainer to="/settings">
                     <li><a href="#">SETTINGS</a></li>
                   </LinkContainer>
+                  <LinkContainer to="/documentation">
+                    <li><a href="#">DOCUMENTATION</a></li>
+                  </LinkContainer>
+                  <LinkContainer to="/contact">
+                    <li><a href="#">CONTACT US</a></li>
+                  </LinkContainer>
                 </ul>
 
               : <>
                   <ul className="main-nav animated slideInRight" id="check-status">
-                    <li><a href="#">MUSIC</a></li>
                     <LinkContainer to="/signup">
                       <li><a href="#">SIGN UP</a></li>
                     </LinkContainer>
                     <LinkContainer to="/login">
                       <li><a href="#">LOGIN</a></li>
                     </LinkContainer>
-                    <li><a href="#">CONTACT US</a></li>
+                    <LinkContainer to="/documentation">
+                      <li><a href="#">DOCUMENTATION</a></li>
+                    </LinkContainer>
+                    <LinkContainer to="/contact">
+                      <li><a href="#">CONTACT US</a></li>
+                    </LinkContainer>
                   </ul>
                 </>
             }

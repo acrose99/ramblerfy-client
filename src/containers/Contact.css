@@ -1,0 +1,113 @@
+.wrapper{
+    margin: auto;
+    width:75%; /*Moves the info text horizontally*/
+    background-size: cover;
+}
+
+
+
+.wrapper h1{
+    margin-top: 50px;
+    color: snow;
+    text-align:center;
+    font-size: 40px;
+    font-family: Georgia;
+}
+
+.wrapper h3{
+    width: 60%;
+    padding-bottom: 5px;
+    color: black;
+    font-family: Georgia;
+    text-align:left;
+}
+
+.information info.fa{
+    color: snow;
+    font-size: larger;
+    padding: 17px;
+    border-radius: 80%;
+    margin: 15px;
+    border: 2px solid black;
+}
+
+.information {
+    display:grid;
+    grid-template-columns: auto auto;
+
+}
+.details{
+    font-weight: bold;
+    font-size: 17px;
+    font-family: Georgia;
+    color:snow;
+    letter-spacing: 3px;
+}
+
+.form{
+    width:550px;
+    max-width: 550px;
+    padding:10px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 5px;
+    margin:15px;
+    margin-left: 50px;
+}
+.form h4{
+    color:snow;
+    margin: 10px;
+}
+
+#form1 input{
+     padding: 10px;
+     margin: 10px;
+     width: 92%;
+     border:none;
+     color:snow;
+     background-color:rgba(0,0,0, 0.7);
+     font-family: Georgia;
+
+ }
+
+ #form1 input::placeholder{
+     color: snow;
+    font-family: Georgia;
+ }
+
+#form1 textarea{
+     margin: 10px;
+     padding:10px;
+     max-width: 500px;
+     width:92%;
+     color:snow;
+     font-family: Georgia;
+     background-color: rgba(0,0,0, 0.7);
+      }
+
+ #form1 textarea::placeholder{
+    color:snow;
+    font-family: Georgia;
+  }
+
+.submit{
+    color:black;
+    margin: 10px;
+    padding: 7px;
+    width: 30%;
+    background-color:rgb(183, 130, 236);
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Georgia;
+    }
+
+@media (max-width: 768px){
+    .information{
+        display: block;
+        width: 100%;
+        text-align:center;
+
+        }
+    .submit{
+        width: 60%;
+    }
+    }

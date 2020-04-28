@@ -1,0 +1,26 @@
+h3{
+    color: white;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+h2{
+    color: powderblue;
+    font-size: 240%;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+p{
+    color: lightcyan;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+a{
+    color: powderblue;
+    font-size: 240%;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}

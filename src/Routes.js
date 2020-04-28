@@ -6,6 +6,10 @@ import Login from "./containers/Login";
 import Signup from "./containers/Signup";
 import AppliedRoute from "./components/AppliedRoute";
 import Settings from "./containers/Settings";
+import ForgotPassword from "./containers/ForgotPassword";
+import SearchPage from "./containers/SearchPage";
+import Contact from "./containers/Contact";
+import Documentation from "./containers/Documentation";
 
 export default function Routes({ appProps }) {
   return (
@@ -21,6 +25,18 @@ export default function Routes({ appProps }) {
 
       { /* Route to Settings page */ }
       <AppliedRoute path="/settings" exact component={Settings} appProps={appProps} />
+
+      { /* Route to password reset page */ }
+      <AppliedRoute path="/forgotpassword" exact component={ForgotPassword} appProps={appProps} />
+
+      { /* Route to song search page */ }
+      <AppliedRoute path="/searchpage" exact component={SearchPage} appProps={appProps} />
+
+      { /* Route to contact page */ }
+      <AppliedRoute path="/contact" exact component={Contact} appProps={appProps} />
+
+      { /* Route to Documentation page */ }
+      <AppliedRoute path="/documentation" exact component={Documentation} appProps={appProps} />
 
       { /* Redirects to 404 error for any route that doesnt match */ }
       <Route component={NfError}/>

@@ -25,7 +25,7 @@ def main():
     start = time.time()
 
     search.main(sp, search_string, search_type)
-    audio_features.print_json(search_string)
+    # audio_features.print_json(search_string)
 
     delta = time.time() - start
     print("Data retrieved in %.2f seconds" % (delta,))
@@ -42,7 +42,7 @@ def script():
     # Turn this to False for pretty output
     sp.trace = False
     search_type = "artist"
-    with open('output.txt') as f:
+    with open('C:/Users/Matt/ramblerfy-backend/ramblerfy-client/Backend/output.txt') as f:
         artists = []
         for line in f:
             artists.append(line)
@@ -51,5 +51,5 @@ def script():
     search.search_multiples(sp, artists, search_type)
 
 
-# main()
-script()
+main()
+# script()

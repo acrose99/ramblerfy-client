@@ -8,3 +8,24 @@
     max-width: 320px;
   }
 }
+
+
+.forgotPassword {
+    margin:50px 0px; padding:0px;
+    text-align:center;
+    align:center
+}
+
+
+.forgotPassword li a {
+    padding: 5px 0;
+    color:white;
+    text-decoration: blueviolet;
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: 100;
+}
+
+.forgotPassword li a:hover{
+    border-bottom: 2px solid #bf55ec;
+}

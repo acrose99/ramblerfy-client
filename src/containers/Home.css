@@ -30,6 +30,16 @@ h1{
     margin-bottom: 25px;
 }
 
+.login {
+    display: inline-block;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 200px;
+    background-color: transparent;
+    color: whitesmoke;
+    margin-right: 15px;
+}
+
 .btn {
     display: inline-block;
     padding: 10px;

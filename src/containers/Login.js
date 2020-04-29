@@ -4,10 +4,11 @@ import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./Login.css";
 import LoadButton from "../components/LoadButton";
 import { useFormFields } from "../libs/hooksLib";
+import { LinkContainer } from "react-router-bootstrap";
 
 export default function Login(props) {
   const [isLoading, setIsLoading] = useState(false);
-  
+
   // uses custom hook to handle form fields
   const [fields, handleFieldChange] = useFormFields({
     email: "",
@@ -27,6 +28,8 @@ export default function Login(props) {
     try {
       await Auth.signIn(fields.email, fields.password);
       props.userHasAuth(true);
+      const userCreds = await Auth.currentUserInfo();
+      props.setUserCreds(userCreds);
       props.history.push("/");
     } catch (e) {
       alert (e.message);
@@ -65,6 +68,11 @@ export default function Login(props) {
           Login
         </LoadButton>
       </form>
+      <ul className="forgotPassword">
+        <LinkContainer to="/forgotpassword">
+          <li><a href="#">forgot password?</a></li>
+        </LinkContainer>
+      </ul>
     </div>
   );
 

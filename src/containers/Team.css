@@ -1,0 +1,11 @@
+.teammate p {
+        font-size: 15px;
+        color: lightblue;
+}
+.teammate h3 {
+    font-size: 20px;
+
+}
+.main-content-header {
+    position: relative;
+}

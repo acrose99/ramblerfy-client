@@ -71,6 +71,9 @@ function App(props) {
                   <LinkContainer to="/contact">
                     <li><a href="#">CONTACT US</a></li>
                   </LinkContainer>
+                  <LinkContainer to="/team">
+                    <li><a href="#">About Us</a></li>
+                  </LinkContainer>
                 </ul>
 
               : <>
@@ -86,6 +89,9 @@ function App(props) {
                     </LinkContainer>
                     <LinkContainer to="/contact">
                       <li><a href="#">CONTACT US</a></li>
+                    </LinkContainer>
+                    <LinkContainer to="/team">
+                      <li><a href="#">About Us</a></li>
                     </LinkContainer>
                   </ul>
                 </>

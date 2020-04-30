@@ -4,6 +4,7 @@ import Home from "./containers/Home";
 import NfError from "./containers/NfError";
 import Login from "./containers/Login";
 import Signup from "./containers/Signup";
+import Team from "./containers/Team";
 import AppliedRoute from "./components/AppliedRoute";
 import Settings from "./containers/Settings";
 import ForgotPassword from "./containers/ForgotPassword";
@@ -34,6 +35,9 @@ export default function Routes({ appProps }) {
 
       { /* Route to contact page */ }
       <AppliedRoute path="/contact" exact component={Contact} appProps={appProps} />
+
+      { /* Route to team page */ }
+      <AppliedRoute path="/team" exact component={Team} appProps={appProps} />
 
       { /* Route to Documentation page */ }
       <AppliedRoute path="/documentation" exact component={Documentation} appProps={appProps} />

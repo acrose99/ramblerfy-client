@@ -277,6 +277,16 @@ h4{
    box-shadow: -407px 0 0 400px #5ce2fa;
 }
 
+.LoadButton {
+  vertical-align: baseline;
+  margin-bottom: 10px;
+  width: 50vh;
+}
+
+.btn-align {
+  text-align: center;
+}
+
 .movable-icon{display: none;}
 
 @media only screen and (max-width: 1180px){

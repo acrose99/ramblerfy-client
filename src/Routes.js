@@ -8,6 +8,7 @@ import AppliedRoute from "./components/AppliedRoute";
 import Settings from "./containers/Settings";
 import ForgotPassword from "./containers/ForgotPassword";
 import SearchPage from "./containers/SearchPage";
+import ResultsPage from "./containers/ResultsPage";
 import Contact from "./containers/Contact";
 import Documentation from "./containers/Documentation";
 
@@ -31,6 +32,9 @@ export default function Routes({ appProps }) {
 
       { /* Route to song search page */ }
       <AppliedRoute path="/searchpage" exact component={SearchPage} appProps={appProps} />
+
+      { /* Route to results page */ }
+      <AppliedRoute path="/results" exact component={ResultsPage} appProps={appProps} />
 
       { /* Route to contact page */ }
       <AppliedRoute path="/contact" exact component={Contact} appProps={appProps} />

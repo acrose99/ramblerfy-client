@@ -16,6 +16,7 @@ function App(props) {
   const [isAuth, userHasAuth] = useState(false);
   const [isAuthenticating, setIsAuthenticating] = useState(true);
   const [userCreds, setUserCreds] = useState(null);
+  const [userResults, setUserResults] = useState(null);
 
   // triggers onLoad the first time app is loaded (empty list of var as param)
   useEffect(() => {
@@ -94,7 +95,7 @@ function App(props) {
           </div>
         </nav>
         { /*this handles all components rendered under the navbar */ }
-        <Routes appProps={{ isAuth, userHasAuth, userCreds, setUserCreds }} />
+        <Routes appProps={{ isAuth, userHasAuth, userCreds, setUserCreds, userResults, setUserResults }} />
       </header>
     </div>
   );

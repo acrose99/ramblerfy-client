@@ -1,0 +1,29 @@
+/* li {
+    padding: 5px 0;
+    color:black;
+    text-decoration: blueviolet;
+    font-size: 90%;
+    font-weight: 100;
+} */
+
+#container {
+    text-align: left;
+    margin-top: 0%;
+    margin-left: 17%;
+    padding-bottom: 0;
+    margin-right:2%;
+    margin-bottom: 10px;
+}
+.pix-grid{
+    display: grid;
+    justify-items: center;
+    margin-right: 80px;
+    grid-gap: 1px;
+    grid-row-gap: 15px;
+    grid-column-gap:10px;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+}
+
+.card img{
+    width: 100%;
+}

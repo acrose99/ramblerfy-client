@@ -3,27 +3,26 @@
   padding: 80px 0;
   text-align: center;
 }
-
 .Home .maintext h1 {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
 }
-
 .Home .maintext p {
   color: #999;
 }
 */
 
-.main-content-header{
+.main-content-headerHome{
     width: 1180px;
     position: absolute;
     top: 50%;
     left: 50% ;
-    transform: translate(-50%, -50%);
+    transform: translate(-60%, -50%);
 }
 
 h1{
     color: white;
+    margin-top: 100px;
     font-size: 240%;
     word-spacing: 5px;
     letter-spacing: 2px;
@@ -69,15 +68,7 @@ h1{
 .btn-two:hover{
     background-color: #bf55ec;
 }
-.btn-three {
-    background-color: paleturquoise;
-    color: darkblue;
-    margin-right: 15px;
-    border: 1px groove cyan;
-}
-.btn-three:hover {
-    background-color: #bf55ec;
-}
+
 .colorchange{
     animation: colorchangeRamblerfy 1s infinite ;
 }

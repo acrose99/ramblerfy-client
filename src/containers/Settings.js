@@ -29,7 +29,6 @@ export default function Settings(props) {
     if(userCreds === null) {
       username = "loading...";
     } else username = userCreds.attributes.email;
-
     return (
       <div className="main-content-header">
           <h1>My Account:<br />
@@ -38,10 +37,10 @@ export default function Settings(props) {
     );
     */
     return (
-      <div className="main-content-header">
+        <div className="main-content-headerSettings">
           <h1>My Account:<br />
-              {userCreds !== null ? userCreds.attributes.email : "none"} </h1>
-      </div>
+            {userCreds !== null ? userCreds.attributes.email : "none"} </h1>
+        </div>
     );
   }
 
@@ -53,9 +52,9 @@ export default function Settings(props) {
   );
   */
   return (
-    <div className="Settings">
-      {accountInfo()}
-    </div>
+      <div className="Settings">
+        {accountInfo()}
+      </div>
   );
 
 }

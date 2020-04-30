@@ -1,26 +1,64 @@
+.Home{
+
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#containerdocumentation{
+    position:absolute;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    width: 1340px;
+    height:900px;
+    background-color: rgba(0,0,0, 0.7);
+    border-radius: 1%;
+}
+
+h1{
+    font-family: 'Bellota', cursive;
+    margin-left: 40px;
+    margin-top: 0px;
+    padding-top: 30px;
+}
+ul.description{
+    list-style-type: none;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+
 h3{
     color: white;
     word-spacing: 5px;
+    margin-left: 30px;
     letter-spacing: 2px;
-    margin-bottom: 25px;
+    font-family: 'Bellota', cursive;
+    margin-bottom: 20px;
 }
 h2{
-    color: powderblue;
-    font-size: 240%;
+    color: white;
+    font-size: 100%;
     word-spacing: 5px;
+    margin-left: 30px;
     letter-spacing: 2px;
     margin-bottom: 25px;
+    font-family: 'Bellota', cursive;
 }
 p{
-    color: lightcyan;
+    color: powderblue;
     word-spacing: 5px;
+    margin-left:50px;
     letter-spacing: 2px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+    font-family: 'Bellota', cursive;
 }
 a{
     color: powderblue;
-    font-size: 240%;
+    font-size: 100%;
     word-spacing: 5px;
     letter-spacing: 2px;
-    margin-bottom: 25px;
+    margin-left: 6%;
+    padding-bottom: 10px;
+    font-family: 'Bellota', cursive;
 }

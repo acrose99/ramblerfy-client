@@ -1,25 +1,21 @@
 .wrapper{
     margin: auto;
+    margin-top:3%;
     width:75%; /*Moves the info text horizontally*/
     background-size: cover;
+    background-repeat: no-repeat;
 }
-
-
 
 .wrapper h1{
-    margin-top: 50px;
-    color: snow;
-    text-align:center;
-    font-size: 40px;
-    font-family: Georgia;
-}
-
-.wrapper h3{
-    width: 60%;
-    padding-bottom: 5px;
+    margin-top: 10px;
     color: black;
-    font-family: Georgia;
     text-align:left;
+    font-size: 40px;
+    font-family: 'Bellota', cursive;
+}
+.information h3{
+    font-family: 'Bellota', cursive;
+    font-size: large;
 }
 
 .information info.fa{
@@ -38,8 +34,8 @@
 }
 .details{
     font-weight: bold;
-    font-size: 17px;
-    font-family: Georgia;
+    font-size: 20px;
+    font-family: 'Bellota', cursive;
     color:snow;
     letter-spacing: 3px;
 }
@@ -56,58 +52,65 @@
 .form h4{
     color:snow;
     margin: 10px;
+    font-family: 'Bellota', cursive;
 }
 
 #form1 input{
-     padding: 10px;
-     margin: 10px;
-     width: 92%;
-     border:none;
-     color:snow;
-     background-color:rgba(0,0,0, 0.7);
-     font-family: Georgia;
+    padding: 10px;
+    margin: 10px;
+    width: 92%;
+    height:45px;
+    border:none;
+    color:snow;
+    background-color:rgba(0,0,0, 0.7);
+    font-family: 'Bellota', cursive;
+    font-size: medium;
+}
 
- }
-
- #form1 input::placeholder{
-     color: snow;
-    font-family: Georgia;
- }
+#form1 input::placeholder{
+    font-size: medium;
+    color: snow;
+    font-family: 'Bellota', cursive;
+}
 
 #form1 textarea{
-     margin: 10px;
-     padding:10px;
-     max-width: 500px;
-     width:92%;
-     color:snow;
-     font-family: Georgia;
-     background-color: rgba(0,0,0, 0.7);
-      }
-
- #form1 textarea::placeholder{
+    margin: 10px;
+    padding:10px;
+    max-width: 500px;
+    font-size: medium;
+    width:92%;
     color:snow;
-    font-family: Georgia;
-  }
+    font-family: 'Bellota', cursive;
+    background-color: rgba(0,0,0, 0.7);
+}
+
+#form1 textarea::placeholder{
+    color:snow;
+    font-family: 'Bellota', cursive;
+    font-size: medium;
+}
 
 .submit{
     color:black;
     margin: 10px;
     padding: 7px;
-    width: 30%;
+    font-size: large;
+    width: 40%;
     background-color:rgb(183, 130, 236);
     font-weight: bold;
     cursor: pointer;
-    font-family: Georgia;
-    }
+    font-family: 'Bellota', cursive;
+}
 
-@media (max-width: 768px){
-    .information{
+@media (max-width: 768px) {
+    .information {
         display: block;
         width: 100%;
-        text-align:center;
+        text-align: center;
 
-        }
-    .submit{
+    }
+
+    .submit {
         width: 60%;
     }
-    }
+}

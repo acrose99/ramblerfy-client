@@ -1,7 +1,7 @@
 .App-container {
-  /* background-image: url('./images/headertemp.jpg'); */
-  background-image: url('./images/purplebeach.jpeg');
-  /* background-attachment: fixed; */
+   background-image: url('./images/headertemp.jpg');
+  /*background-image: url('./images/purplebeach.jpeg');*/
+   background-attachment: fixed;
   background-size: cover;
   background-position: 50% 50%;
   /* width: 100%; */

@@ -64,11 +64,11 @@ function searchDb(filterDanceabiltyLow, filterDanceabiltyHigh, filterValenceLow,
         }
         //only stores the JSON
         filteredSongs = result[0]['tracks'];
-        console.log(filteredSongs);
+        console.log(result);
 
         //Returns all the songs for UI function
-        db.close();
-        return filteredSongs;
+        // db.close();
+        // return filteredSongs;
       //we want to display 5 songs each search
 
       // if (result[0].length >= 5) {
@@ -100,11 +100,11 @@ function searchDb(filterDanceabiltyLow, filterDanceabiltyHigh, filterValenceLow,
       //         console.log('--------------------------------');
       //     }
       // }
-      // db.close();
+      db.close();
     });
   });
-    // console.log(filteredSongs);
-    // return filteredSongs;
+    console.log(filteredSongs);
+    return filteredSongs;
 }
 
 // searchDb();

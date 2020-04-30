@@ -24,7 +24,7 @@ export default function Home() {
         //     </Card>
         // </div>
         //
-        <div className="main-content-header">
+        <div className="header">
             <div className={"teammate"}>
                 <img src={require("../images/matt.jpg")} height="200" width="250"/>
                 <h3 className="Name">Matt Lofredo</h3>

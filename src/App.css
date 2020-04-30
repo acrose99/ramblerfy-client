@@ -80,7 +80,7 @@ header {
 
     .main-nav{display: none;}
 
-    .movable-icon{ display:inline block ;
+    .movable-icon{ display:inline ;
         color: mintcream;
         float: right;
         margin-top: 20px;
@@ -95,3 +95,6 @@ header {
         display: block;
         margin-top: 10px;
     }
+.navbar {
+    background-color: plum;
+}

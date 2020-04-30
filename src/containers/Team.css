@@ -1,6 +1,15 @@
+/*.card {*/
+/*    font-size: 15px;*/
+/*    background-color: plum;*/
+/*}*/
+/*.CardBody {*/
+/*    position: relative;*/
+/*    display: flex;*/
+/*}*/
+
 .teammate p {
-        font-size: 15px;
-        color: lightblue;
+    font-size: 15px;
+    color: lightblue;
 }
 .teammate h3 {
     font-size: 20px;

@@ -11,6 +11,19 @@ body {
     font-size: 220%;
 }
 
+.main-content-header{
+    /* width: 1180px;
+    height:auto;
+    position: relative;
+    top: 40%;
+    left: 50% ;
+    */
+    transform: translate(-60%, 0%);
+    position: relative;
+    display: block;
+    /*Or*/
+    clear:both;
+}
 
 
 h2{
@@ -24,8 +37,7 @@ h2{
 
 h4{font-family: 'Bellota', cursive;
     text-align: center;
-    padding-top: 9px;
-
+    margin-right: 40%;
 }
 #containerSearch {
     text-align: left;
@@ -74,9 +86,30 @@ h4{font-family: 'Bellota', cursive;
 
 }
 
+#container {
+    text-align: left;
+    margin-bottom: 0px;
+    margin-top: 1px;
+    position: relative;
+}
+
+#container button {
+    display: block;
+    height: 40px;
+    padding: 10px;
+    width:190px;
+    margin-left: 13%;
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 200px;
+    outline:none;
+}
 #container div{
     position: relative;
 }
+
 
 #danceability{
     position: absolute;
@@ -304,7 +337,7 @@ h4{font-family: 'Bellota', cursive;
     .main-nav{display: none;}
 
     .movable-icon{
-        display:inline block ;
+        display:inline;
         color: mintcream;
         float: right;
         margin-top: 20px;

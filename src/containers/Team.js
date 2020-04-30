@@ -1,8 +1,29 @@
 import React from "react";
 import './Team.css';
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, CardLink, Button
+} from 'reactstrap';
 
 export default function Home() {
     return (
+        // <div className="card">
+        //     <Card border="primary" style={{width: '18rem'}} height="200">
+        //         <CardImg variant="top" src={require("../images/alex.jpg")}/>
+        //         <CardBody>
+        //             <CardTitle>Alex Rose</CardTitle>
+        //             <CardSubtitle>Role: Backend</CardSubtitle>
+        //             <CardSubtitle>
+        //                 I'm a sophomore studying Computer Science at Loyola. I'm also a Mulcahy Fellow at the Software
+        //                 Systems Laboratory and the VP of the Don't Panic CS Club. I'm a huge fan of House, Jazz and Soul
+        //                 music.
+        //             </CardSubtitle>
+        //             <CardLink href="http://dontpanic.cs.luc.edu/exec">Don't Panic</CardLink>
+        //             <CardLink href="https://ssl.cs.luc.edu/team.html">SSL</CardLink>
+        //         </CardBody>
+        //     </Card>
+        // </div>
+        //
         <div className="main-content-header">
             <div className={"teammate"}>
                 <img src={require("../images/matt.jpg")} height="200" width="250"/>

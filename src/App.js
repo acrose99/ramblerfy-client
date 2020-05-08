@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { Link, withRouter } from "react-router-dom";
-import { Navbar, Nav, NavItem } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
+import React, {useEffect, useState} from "react";
+import {withRouter} from "react-router-dom";
 import './App.css';
 import Routes from "./Routes";
-import { Jumbotron } from "./components/Jumbotron";
-import { Auth } from "aws-amplify";
+import {Auth} from "aws-amplify";
+import {makeStyles} from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import IconButton from "@material-ui/core/IconButton";
+import SvgIcon from "@material-ui/core/SvgIcon";
+import {ReactComponent as Icon} from "./images/icon4.svg";
+import Button from "@material-ui/core/Button";
 
 function App(props) {
   /* useState is a react hook with the format [variable, function]
@@ -18,6 +22,32 @@ function App(props) {
   const [userCreds, setUserCreds] = useState(null);
   const [userResults, setUserResults] = useState(null);
 
+  const useStyles = makeStyles((theme) => ({
+    root: {
+      flexGrow: 1,
+    },
+    menuButton: {
+      marginRight: theme.spacing(2),
+    },
+    linkButton: {
+      backgroundColor: "#57336a",
+      color: "white",
+      fontSize: 12,
+      margin: 25,
+    },
+    toolbar: {
+      height: 100,
+
+    },
+    icon: {
+      width: 100,
+      height: 100,
+    },
+    title: {
+      flexGrow: 1,
+    },
+  }));
+  const classes = useStyles();
   // triggers onLoad the first time app is loaded (empty list of var as param)
   useEffect(() => {
     onLoad();
@@ -51,63 +81,67 @@ function App(props) {
   return (
     !isAuthenticating &&
     <div className="App-container">
-        <Navbar classname="navbar" bg="dark" variant="dark" >
-          <Navbar.Brand href="#home"/>
-          <div className="row clearfix">
-            <Nav>
-              <LinkContainer to="/">
-                <img src={require("./images/android-chrome-512x512.png")} className="logo" />
-              </LinkContainer>
-            </Nav>
-            {isAuth
-              ? <ul
-                className="main-nav animated slideInRight"
-                id="check-status"
-                >
-                  <Nav>
-                    <NavItem onClick={handleLogout}>Logout</NavItem>
-                  </Nav>
-                  <Nav>
-                    <LinkContainer to="/settings">
-                      <li><a href="#">SETTINGS</a></li>
-                    </LinkContainer>
-                    <LinkContainer to="/documentation">
-                      <li><a href="#">DOCUMENTATION</a></li>
-                    </LinkContainer>
-                    <LinkContainer to="/contact">
-                      <li><a href="#">CONTACT US</a></li>
-                    </LinkContainer>
-                    <LinkContainer to="/team">
-                      <li><a href="#">About Us</a></li>
-                    </LinkContainer>
-                  </Nav>
-                </ul>
 
-              : <>
-                  <ul className="main-nav animated slideInRight" id="check-status">
-                    <LinkContainer to="/signup">
-                      <li><a href="#">SIGN UP</a></li>
-                    </LinkContainer>
-                    <LinkContainer to="/login">
-                      <li><a href="#">LOGIN</a></li>
-                    </LinkContainer>
-                    <LinkContainer to="/documentation">
-                      <li><a href="#">DOCUMENTATION</a></li>
-                    </LinkContainer>
-                    <LinkContainer to="/contact">
-                      <li><a href="#">CONTACT US</a></li>
-                    </LinkContainer>
-                    <LinkContainer to="/team">
-                      <li><a href="#">About Us</a></li>
-                    </LinkContainer>
-                  </ul>
-                </>
-            }
-            <a href="#" className="movable-icon" onclick="slideshow()"> <i className="fa fa-align-justify" /> </a>
+      {isAuth
+          ? <div className={classes.root}>
+            <AppBar position="static">
+              <Toolbar className={classes.toolbar}>
+                <IconButton className={classes.menuButton} href="/" edge={"start"}>
+                  <SvgIcon role={"img"} className={classes.icon} component={Icon} viewBox="0 0 50 50">
+
+                  </SvgIcon>
+                </IconButton>
+                <Button onClick={handleLogout} className={classes.linkButton} variant="contained"  href="/login">
+                  Logout
+                </Button>
+                <Button className={classes.linkButton} variant="contained"  href="/settings">
+                  Settings
+                </Button>
+                <Button className={classes.linkButton} variant="contained"  href="/documentation">
+                  Documentation
+                </Button>
+                <Button className={classes.linkButton} variant="contained"  href="/contact">
+                  Contact Us
+                </Button>
+                <Button className={classes.linkButton} variant="contained"  href="/team">
+                  About Us
+                </Button>
+              </Toolbar>
+            </AppBar>
           </div>
-        </Navbar>
+
+          : <>
+            <div className={classes.root}>
+              <AppBar position="static">
+                <Toolbar className={classes.toolbar}>
+                  <IconButton className={classes.menuButton} href="/" edge={"start"}>
+                    <SvgIcon role={"img"} className={classes.icon} component={Icon} viewBox="0 0 50 50">
+
+                    </SvgIcon>
+                  </IconButton>
+                  <Button className={classes.linkButton} variant="contained"  href="/login">
+                    Login
+                  </Button>
+                  <Button className={classes.linkButton} variant="contained"  href="/settings">
+                    Settings
+                  </Button>
+                  <Button className={classes.linkButton} variant="contained"  href="/documentation">
+                    Documentation
+                  </Button>
+                  <Button className={classes.linkButton} variant="contained"  href="/contact">
+                    Contact Us
+                  </Button>
+                  <Button className={classes.linkButton} variant="contained"  href="/team">
+                    About Us
+                  </Button>
+                </Toolbar>
+              </AppBar>
+            </div>
+          </>
+      }
         { /*this handles all components rendered under the navbar */ }
         <Routes appProps={{ isAuth, userHasAuth, userCreds, setUserCreds, userResults, setUserResults }} />
+      <a href="#" className="movable-icon" onClick="slideshow()"> <i className="fa fa-align-justify"/> </a>
     </div>
   );
 }

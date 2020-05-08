@@ -1,20 +1,25 @@
-/*.card {*/
-/*    font-size: 15px;*/
-/*    background-color: plum;*/
-/*}*/
-/*.CardBody {*/
-/*    position: relative;*/
-/*    display: flex;*/
-/*}*/
-
-.teammate p {
-    font-size: 15px;
-    color: lightblue;
-}
-.teammate h3 {
-    font-size: 20px;
+.root {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
 }
-.main-content-header {
-    position: relative;
+.media {
+    height: 240px;
 }
+.teammate {
+    margin: 20px;
+    flex: 1;
+    width: 345px;
+
+}
+.content {
+    margin: 10px;
+    height: 30px;
+    font-size: 12px;
+}
+.github {
+    justify-content: center;
+}
+
+

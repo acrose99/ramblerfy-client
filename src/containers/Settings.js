@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Auth } from "aws-amplify";
+import React from "react";
 import "./Settings.css";
 
 export default function Settings(props) {

@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Auth } from "aws-amplify";
-import { LinkContainer } from "react-router-bootstrap";
+import React, {useEffect, useState} from 'react';
+import {LinkContainer} from "react-router-bootstrap";
 import "./ResultsPage.css";
-import LoadButton from "../components/LoadButton";
 import Tracks from "../components/Tracks";
 import Pagination from "../components/Pagination";
 

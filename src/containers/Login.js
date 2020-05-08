@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { Auth } from "aws-amplify";
-import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import React, {useState} from 'react';
+import {Auth} from "aws-amplify";
+import {ControlLabel, FormControl, FormGroup} from "react-bootstrap";
 import "./Login.css";
 import LoadButton from "../components/LoadButton";
-import { useFormFields } from "../libs/hooksLib";
-import { LinkContainer } from "react-router-bootstrap";
+import {useFormFields} from "../libs/hooksLib";
+import {LinkContainer} from "react-router-bootstrap";
 
 export default function Login(props) {
   const [isLoading, setIsLoading] = useState(false);

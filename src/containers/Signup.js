@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Auth } from "aws-amplify";
-import { FormGroup, FormControl, ControlLabel, HelpBlock } from "react-bootstrap";
+import React, {useState} from 'react';
+import {Auth} from "aws-amplify";
+import {ControlLabel, FormControl, FormGroup, HelpBlock} from "react-bootstrap";
 import "./Signup.css";
 import LoadButton from "../components/LoadButton";
-import { useFormFields } from "../libs/hooksLib";
+import {useFormFields} from "../libs/hooksLib";
 
 export default function Signup(props) {
   const [isLoading, setIsLoading] = useState(false);

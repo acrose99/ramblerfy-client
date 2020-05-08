@@ -1,5 +1,5 @@
 import React from 'react';
-import { Jumbotron as Jumbo } from 'react-bootstrap';
+import {Jumbotron as Jumbo} from 'react-bootstrap';
 import './Jumbotron.css';
 
 export const Jumbotron = () => (
